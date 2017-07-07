@@ -459,6 +459,11 @@ img {
   height: auto;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .large-hero {
   position: relative;
   border-bottom: 10px solid #2f5572;
@@ -550,6 +555,7 @@ img {
   }
 
 .container {
+  overflow: hidden;
   padding-left: 18px;
   padding-right: 18px;
   max-width: 1200px;
@@ -632,4 +638,24 @@ img {
 
 .headline--b-margin-large {
     margin-bottom: 1.6em;
+  }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.row--gutters > div {
+    padding-right: 65px;
+  }
+
+.row__col-4 {
+    float: left;
+    width: 33.33%;
+  }
+
+.row__col-8 {
+    float: left;
+    width: 66.66%;
   }
