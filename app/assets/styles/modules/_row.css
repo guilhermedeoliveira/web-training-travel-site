@@ -2,7 +2,7 @@
 
   @mixin clearFix;
 
-  $--gutters {
+  &--gutters {
     margin-right: -65px;
   }
 
@@ -10,7 +10,15 @@
     padding-right: 65px;
   }
 
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
   @mixin atMedium {
+
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
 
     &__col-medium-4 {
       float: left;
