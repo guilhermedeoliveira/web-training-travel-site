@@ -1,17 +1,17 @@
+const path = require('path');
+
 module.exports = {
-  entry: "./app/assets/scripts/App.js",
+  entry: "./app/assets/scripts/index.js",
   output: {
-    path: "./app/temp/scripts",
+    // path: path.join(__dirname + "./app/temp/scripts"),
+    path: '/home/guilhermedeoliveira/web-dev/web-training-travel-site/app/temp/scripts',
     filename: "bundle.js"
   },
 
   module: {
-    loaders: [
+    rules: [
       {
-        loader: 'babel',
-        query: {
-          presets: ['es2015']
-        },
+        use: 'babel-loader',
         test: /\.js$/,
         exclude: /node_modules/
       }
