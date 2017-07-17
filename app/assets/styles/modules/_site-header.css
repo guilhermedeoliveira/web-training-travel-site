@@ -41,17 +41,53 @@
 
   &__menu-icon {
     width: 20px;
-    height: 20px;
-    background-color: #FFF;
+    height: 19px;
     position: absolute;
     z-index: 10;
     top: 10px;
     right: 10px;
 
+    &__top {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #FFF;
+      transform-origin: 0 0;
+    }
+
+    &__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #FFF;
+    }
+
+    &__bottom {
+      content: "";
+      position: absolute;
+      top: 8.25px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #FFF;
+    }
+
+    &--close-x {
+      &::before {
+      transform: rotate(45deg) scaleX(1.25);
+    }
+    }
+
     @mixin atMedium {
       display: none;
     }
   }
+
 
   &__menu-content {
     opacity: 0;
