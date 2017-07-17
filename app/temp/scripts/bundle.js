@@ -85,6 +85,7 @@ let mobileMenu = new __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__["a" /* de
 
 class MobileMenu {
   constructor() {
+    this.siteHeader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.site-header');
     this.menuIcon = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.site-header__menu-icon');
     this.menuContent = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.site-header__menu-content');
     this.events();
@@ -96,6 +97,7 @@ class MobileMenu {
 
   toggleMenu() {
     this.menuContent.toggleClass('site-header__menu-content--is-visible');
+    this.siteHeader.toggleClass('site-header--is-expended');
   }
 }
 
